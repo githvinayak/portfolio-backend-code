@@ -17,7 +17,6 @@ config({
   path: "./.env",
 });
 
-
 //db connect
 const port = process.env.PORT || 3000;
 const mongoURI = process.env.DATABASE_URL || "";
@@ -31,7 +30,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(
   cors({
-    origin: [process.env.PORTFOLIO_URL],
+    origin: process.env.PORTFOLIO_URL,
     credentials: true,
   })
 );
