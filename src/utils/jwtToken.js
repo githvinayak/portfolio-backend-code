@@ -10,6 +10,7 @@ export const generateToken = (user, message, statusCode, res) => {
         httpOnly: true,
         sameSite: "None",
         secure: true,
+        domain: 'https://portfolio-backend-code-yq7b.onrender.com'
       })
       .json({
         success: true,
