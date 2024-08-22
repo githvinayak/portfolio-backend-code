@@ -8,9 +8,9 @@ export const generateToken = (user, message, statusCode, res) => {
           Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
         ), // 5 days
         httpOnly: true,
-        // sameSite: "None",
-        // secure: true,
-        // domain: 'https://portfolio-backend-code-yq7b.onrender.com'
+        sameSite: "none",
+        secure: true,
+        domain: 'https://portfolio-backend-code-yq7b.onrender.com'
       })
       .json({
         success: true,

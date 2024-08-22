@@ -32,6 +32,7 @@ app.use(
   cors({
     origin: process.env.PORTFOLIO_URL,
     credentials: true,
+    exposedHeaders: ["Set-Cookie"],
   })
 );
 
